@@ -18,10 +18,10 @@ matrix:
       - sbt -Dsbt.test.fork=true ++$TRAVIS_SCALA212 mimaReportBinaryIssues scalafmtCheckAll headerCheck Test/headerCheck test whitesourceCheckPolicies doc
       - sbt -Dsbt.test.fork=false ++$TRAVIS_SCALA213 test
 
-  - name: "Linux + JDK 11"
+  - name: "Linux + JDK 13"
     dist: xenial
     env:
-      - ADOPTOPENJDK=11
+      - ADOPTOPENJDK=13
 
   - name: "macOS + JDK 8"
     os: osx
